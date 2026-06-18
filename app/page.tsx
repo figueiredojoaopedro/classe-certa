@@ -1,3 +1,5 @@
+import { PostFeed } from "@/components/post-feed";
+
 export default function Home() {
-  return <div>test</div>;
+  return <PostFeed />;
 }

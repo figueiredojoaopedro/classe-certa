@@ -75,6 +75,10 @@ The goal of the MVP is to build a simple, maintainable, and scalable platform.
 
 # Development Principles
 
+## Component-First
+
+Extract UI into reusable components under `components/`. Pages should be thin — compose components rather than inlining markup and logic.
+
 ## Keep it simple
 
 Always prefer simple solutions over complex abstractions.
