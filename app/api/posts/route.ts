@@ -1,16 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { postService } from "@/src/services/postService";
-import {
-  created,
-  badRequest,
-  serverError,
-} from "@/src/lib/api-response";
+import { created, badRequest, serverError } from "@/src/lib/api-response";
 
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = request.nextUrl;
     const page = Math.max(1, Number(searchParams.get("page")) || 1);
-    const limit = Math.min(100, Math.max(1, Number(searchParams.get("limit")) || 10));
+    const limit = Math.min(
+      100,
+      Math.max(1, Number(searchParams.get("limit")) || 10),
+    );
 
     const result = await postService.getAllPosts(page, limit);
 

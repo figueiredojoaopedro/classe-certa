@@ -13,3 +13,24 @@ export type PaginatedPosts = {
   limit: number;
   totalPages: number;
 };
+
+export type User = {
+  username: string;
+  email: string;
+  profileImageUrl: string | null;
+  phoneNumber: string | null;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type RegisterInput = {
+  username: string;
+  email: string;
+  password: string;
+  phoneNumber?: string;
+};
+
+export type LoginInput = {
+  identifier: string;
+  password: string;
+};
